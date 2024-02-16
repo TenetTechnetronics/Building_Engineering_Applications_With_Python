@@ -1,9 +1,9 @@
 from PyQt6.QtWidgets import QApplication, QWidget
 
-#create an Application
+#Create an Application
 app = QApplication([])
 
-#create a window
+#Create a Window
 window = QWidget(windowTitle="Hello World!!")
 window.show()
 
