@@ -12,7 +12,7 @@ window.setMinimumHeight(600)
 # Create a QHBoxLayout instance
 layout = QHBoxLayout()
 
-# Create widgets and add them to the layout
+# Create widgets 
 button1 = QPushButton('Button 1')
 button2 = QPushButton('Button 2')
 button3 = QPushButton('Button 3')
@@ -22,6 +22,7 @@ button6 = QPushButton('Button 6')
 button7 = QPushButton('Button 7')
 button8 = QPushButton('Button 8')
 
+# Add widgets to Layout
 layout.addWidget(button1)
 layout.addWidget(button2)
 layout.addWidget(button3)
