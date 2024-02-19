@@ -4,40 +4,52 @@ from PyQt6.QtWidgets import QApplication, QWidget, QStackedLayout, QPushButton, 
 app = QApplication([])
 
 # Create a window
-window = QWidget()
+window = QWidget()      
+window.setWindowTitle('Stacked Layout')
+window.setMinimumWidth(600)
+window.setMinimumHeight(500)
 
-# Create a QVBoxLayout to hold the QStackedLayout and a button for switching views
+# Create a QVBoxLayout to hold the QStackedLayout and a Switch button
 mainLayout = QVBoxLayout()
 
 # Create the QStackedLayout
 stackedLayout = QStackedLayout()
 
-# Create widgets to add to the stacked layout
-widget1 = QPushButton('View 1')
-widget2 = QPushButton('View 2')
+# Create widgets
+widget1 = QPushButton('Page 1')
+widget1.setStyleSheet('background-color: red;')
+widget2 = QPushButton('Page 2')
+widget2.setStyleSheet('background-color: green;')
+widget3 = QPushButton('Page 3')
+widget3.setStyleSheet('background-color: blue;')
 
-# Add widgets to the stacked layout
+# Add widgets to stacked layout
 stackedLayout.addWidget(widget1)
 stackedLayout.addWidget(widget2)
+stackedLayout.addWidget(widget3)
 
+totalViews = 3
 # Function to switch between views
-def switch_view():
+def onSwitchView():
     currentIndex = stackedLayout.currentIndex()
-    newIndex = 1 if currentIndex == 0 else 0  # Switch between 0 and 1
-    stackedLayout.setCurrentIndex(newIndex)
+    if currentIndex < totalViews - 1:
+        stackedLayout.setCurrentIndex(currentIndex + 1)
+    else: 
+        stackedLayout.setCurrentIndex(0)
 
 # Button to switch views
 switchButton = QPushButton('Switch View')
-switchButton.clicked.connect(switch_view)
+switchButton.clicked.connect(onSwitchView)
 
-# Add the stacked layout and switch button to the main layout
+# Add layout and button to main layout
 mainLayout.addLayout(stackedLayout)
 mainLayout.addWidget(switchButton)
 
-# Set the main layout to the window
+# Set main layout to window
 window.setLayout(mainLayout)
-# Display the window
+
+# Show window
 window.show()
 
-# Start the event loop
+# Start event loop
 app.exec()

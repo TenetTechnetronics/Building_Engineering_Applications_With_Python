@@ -19,8 +19,6 @@ button3 = QPushButton('Button 3')
 button4 = QPushButton('Button 4')
 button5 = QPushButton('Button 5')
 button6 = QPushButton('Button 6')
-button7 = QPushButton('Button 7')
-button8 = QPushButton('Button 8')
 
 # Add widgets to Layout
 layout.addWidget(button1)
@@ -29,9 +27,12 @@ layout.addWidget(button3)
 layout.addWidget(button4)
 layout.addWidget(button5)
 layout.addWidget(button6)
-layout.addWidget(button7)
-layout.addWidget(button8)
 
+#Set Spacing between widgets (spacing: int)
+layout.setSpacing(60)
+
+#Set marging for layout (left: int, top: int, right: int, bottom: int)
+layout.setContentsMargins(10,10,250,250)
 # Set the layout on the main window
 window.setLayout(layout)
 
