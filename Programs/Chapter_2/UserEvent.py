@@ -24,7 +24,6 @@ class MyApp(QWidget):
     def onButtonClick(self):
         self.count = self.count + 1
         self.button.setText('Clicked '+ str(self.count))
-        print('Button clicked!')
 
 if __name__ == '__main__':
     # Initialize the PyQt application 
