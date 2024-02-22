@@ -11,7 +11,7 @@ class ButtonApp(QWidget):
         # Create a button
         self.button = QPushButton('Click Me', self)
         
-        # Create a Event handler
+        # Create Event handler
         self.button.clicked.connect(self.onButtonClick)
 
     # Event Handler function

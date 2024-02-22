@@ -13,7 +13,7 @@ class MyApp(QWidget):
         # Create a button
         self.button = QPushButton('Click', self)
         
-        # Create a Event handler
+        # Create Event handler
         self.button.clicked.connect(self.onButtonClick)
 
         layout.addWidget(self.button)
