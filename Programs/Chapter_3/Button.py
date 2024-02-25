@@ -12,9 +12,9 @@ class ButtonApp(QWidget):
         self.setGeometry(100, 100, 400, 300)
         
     def initUI(self):
+        # Create a layout
         layout = QVBoxLayout()
         
-		
         # Create a button
         self.button = QPushButton('Save', self)
         
@@ -22,7 +22,7 @@ class ButtonApp(QWidget):
         icon = QIcon(path + 'assets/images/save_icon.png')
 		# Set icon to button
         self.button.setIcon(icon)
-        
+
         layout.addWidget(self.button)
         layout.setContentsMargins(100, 100, 100, 100)
         # Create Event handler

@@ -13,6 +13,7 @@ class LabelApp(QWidget):
         self.setGeometry(100, 100, 400, 300)
         
     def initUI(self):
+        # Create a layout
         layout = QVBoxLayout()
         
         label = QLabel('Hello, PyQt6!')
