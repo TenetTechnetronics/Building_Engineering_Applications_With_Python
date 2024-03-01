@@ -19,7 +19,7 @@ class ComboBoxApp(QWidget):
         self.comboBox.addItem('Option 5', userData="This is Option 5")
         self.comboBox.setEditable(True)
 
-        # Add TextEdit
+        # Add combobox
         layout.addWidget(self.comboBox)
 
         # Trigger on Index changed
@@ -29,7 +29,7 @@ class ComboBoxApp(QWidget):
 
         # Add button to remove item from list
         button = QPushButton('Remove Item')
-        
+
         # Remove item on Click
         button.clicked.connect(self.removeItem)
         layout.addWidget(button)

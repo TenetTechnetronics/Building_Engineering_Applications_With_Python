@@ -6,8 +6,8 @@ app = QApplication([])
 # Create a window
 window = QWidget()      
 window.setWindowTitle('Stacked Layout')
-window.setMinimumWidth(600)
-window.setMinimumHeight(500)
+window.setMinimumWidth(400)
+window.setMinimumHeight(400)
 
 # Create a QVBoxLayout to hold the QStackedLayout and a Switch button
 mainLayout = QVBoxLayout()

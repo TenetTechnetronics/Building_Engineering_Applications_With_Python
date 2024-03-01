@@ -6,19 +6,18 @@ app = QApplication([])
 # Create the main window
 mainWindow = QWidget()
 mainWindow.setWindowTitle("QVBoxLayout")
-mainWindow.setMinimumWidth(400)
-mainWindow.setMinimumHeight(500)
+mainWindow.setMinimumWidth(300)
+mainWindow.setMinimumHeight(300)
 # Create a QVBoxLayout instance
 layout = QVBoxLayout()
 
 # Create and add widgets to the layout in one line
-layout.addWidget(QPushButton("Button 1", ))
+layout.addWidget(QPushButton("Button 1"))
 layout.addWidget(QPushButton("Button 2"))
 layout.addWidget(QPushButton("Button 3"))
 layout.addWidget(QPushButton("Button 4"))
-layout.addWidget(QPushButton("Button 5"))
 
-# Set the layout for the mainWindow
+# Set the layout 
 mainWindow.setLayout(layout)
 
 # Display the main window

@@ -6,8 +6,8 @@ app = QApplication([])
 # Create a window
 window = QWidget()
 window.setWindowTitle('QGridLayout')
-window.setMinimumWidth(600)
-window.setMinimumHeight(600)
+window.setMinimumWidth(400)
+window.setMinimumHeight(400)
 
 # Create a QGridLayout
 layout = QGridLayout()
