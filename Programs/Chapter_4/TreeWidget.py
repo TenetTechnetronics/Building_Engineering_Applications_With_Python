@@ -29,13 +29,15 @@ class TreeWidgetApp(QWidget):
         }
 
         # Populate tree widget with data
-        for department, employees in data.items():
-            department_item = QTreeWidgetItem(self.tree)
-            department_item.setText(0, department)
+        for company, carModel in data.items():
+            companyItem = QTreeWidgetItem(self.tree)
+            companyItem.setText(0, company)
             
-            for employee in employees:
-                employee_item = QTreeWidgetItem(department_item)
-                employee_item.setText(1, employee)
+            companyItem.setCheckState(0, Qt.CheckState.Checked)
+            
+            for model in carModel:
+                modelItem = QTreeWidgetItem(companyItem)
+                modelItem.setText(1, model)
 
         # Show the tree widget
         self.tree.show()
